@@ -15,7 +15,7 @@ class ComfyUIWebAnnotator:
                     {"multiline": False, "default": "参数名称"},
                 ),
                 "类型":  (["image", "selection", "text","image_editer",], ),
-                "数值约束/依赖项":  (
+                "数值约束或依赖项":  (
                     "STRING",
                     {"multiline": False, "default": ".png,.jpg,.jpeg,.webp"},),
                 "替换项": (
