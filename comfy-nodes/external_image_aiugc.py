@@ -1,3 +1,7 @@
+import folder_paths
+from PIL import Image, ImageOps
+import numpy as np
+import torch
 
 class ComfyUIWebAnnotator:
     @classmethod
@@ -32,5 +36,5 @@ class ComfyUIWebAnnotator:
         return
 
 
-NODE_CLASS_MAPPINGS = {"ComfyUI-Annotator-aiguc.org": ComfyUIWebAnnotator}
-NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUI-Annotator-aiguc.org": "ComfyUI-Annotator-aiguc.org"}
+NODE_CLASS_MAPPINGS = {"ComfyUIWebAnnotator": ComfyUIWebAnnotator}
+NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUIWebAnnotator": "Comfyui Annotator (ComfyUI aiugc.org)"}
