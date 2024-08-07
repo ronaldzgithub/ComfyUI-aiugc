@@ -8,22 +8,16 @@ class ComfyUIWebAnnotator:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "序号": (
+                "标注节点接入": ("MODEL","IMAGE",),
+                "序号": ("INT", {"default": 20, "min": 1, "max": 10000}),
+                "参数名称": (
                     "STRING",
-                    {"multiline": False, "default": "1"},
+                    {"multiline": False, "default": "参数名称"},
                 ),
-                "名称": (
+                "类型":  (["image", "selection", "text","image_editer",], ),
+                "数值约束/依赖项":  (
                     "STRING",
-                    {"multiline": False, "default": "image"},
-                ),
-                "类型": (
-                    "STRING",
-                    {"multiline": False, "default": "image"},
-                ),
-                "依赖项": (
-                    "STRING",
-                    {"multiline": False, "default": "image"},
-                ),
+                    {"multiline": False, "default": ".png,.jpg,.jpeg,.webp"},),
                 "替换项": (
                     "STRING",
                     {"multiline": False, "default": "amount"},
