@@ -1,7 +1,7 @@
 """
 @author: BennyKok
-@title: comfyui-deploy
-@nickname: Comfy Deploy
+@title: ComfyUI-aiugc
+@nickname: comfy aiugc
 @description: 
 """
 import os

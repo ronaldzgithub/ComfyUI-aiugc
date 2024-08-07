@@ -37,4 +37,4 @@ class ComfyUIWebAnnotator:
 
 
 NODE_CLASS_MAPPINGS = {"ComfyUIWebAnnotator": ComfyUIWebAnnotator}
-NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUIWebAnnotator": "Comfyui Annotator (ComfyUI aiugc.org)"}
+NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUIWebAnnotator": "Comfyui Annotator (ComfyUI-aiugc)"}
