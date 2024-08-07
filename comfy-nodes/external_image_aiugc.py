@@ -8,7 +8,7 @@ class ComfyUIWebAnnotator:
     def INPUT_TYPES(s):
         return {
             "required": {
-                "标注节点接入": ("MODEL","IMAGE",),
+                "标注节点接入": ("*"),
                 "序号": ("INT", {"default": 20, "min": 1, "max": 10000}),
                 "参数名称": (
                     "STRING",
