@@ -32,5 +32,5 @@ class ComfyUIWebAnnotator:
         return
 
 
-NODE_CLASS_MAPPINGS = {"ComfyUI-Shangxiaobao": ComfyUIWebAnnotator}
-NODE_DISPLAY_NAME_MAPPINGS = {"Shangxiaobao": "ComfyUI-Shangxiaobao"}
+NODE_CLASS_MAPPINGS = {"ComfyUI-Annotator-aiguc.org": ComfyUIWebAnnotator}
+NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUI-Annotator-aiguc.org": "ComfyUI-Annotator-aiguc.org"}
