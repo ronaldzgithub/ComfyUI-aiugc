@@ -30,11 +30,11 @@ class ComfyUIWebAnnotator:
 
     FUNCTION = "run"
 
-    CATEGORY = "image"
+    CATEGORY = "AIUGC"
 
     def run(self, input_id, default_value=None):
         return
 
 
 NODE_CLASS_MAPPINGS = {"ComfyUIWebAnnotator": ComfyUIWebAnnotator}
-NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUIWebAnnotator": "Comfyui Annotator (ComfyUI-aiugc)"}
+NODE_DISPLAY_NAME_MAPPINGS = {"ComfyUIWebAnnotator": "Comfyui AIUGC Annotator (ComfyUI-aiugc)"}
