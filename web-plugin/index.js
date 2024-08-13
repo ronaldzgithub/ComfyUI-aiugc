@@ -465,10 +465,10 @@ function createDynamicUIHtml(data) {
           <h3 style="font-size: 14px; font-weight: semibold; margin-bottom: 8px;">Missing Nodes</h3>
           <p style="font-size: 12px;">These nodes are not found with any matching custom_nodes in the ComfyUI Manager Database</p>
           ${data.missing_nodes
-              .map((node) => {
-                  return `<p style="font-size: 14px; color: #d69e2e;">${node}</p>`;
-              })
-              .join("")}
+                .map((node) => {
+                    return `<p style="font-size: 14px; color: #d69e2e;">${node}</p>`;
+                })
+                .join("")}
       </div>
   `;
     }
@@ -476,17 +476,14 @@ function createDynamicUIHtml(data) {
     Object.values(data.custom_nodes).forEach((node) => {
         html += `
           <div style="border-bottom: 1px solid #e2e8f0; padding-top: 16px;">
-              <a href="${
-                  node.url
-              }" target="_blank" style="font-size: 18px; font-weight: semibold; color: white; text-decoration: none;">${
-            node.name
-        }</a>
+              <a href="${node.url
+            }" target="_blank" style="font-size: 18px; font-weight: semibold; color: white; text-decoration: none;">${node.name
+            }</a>
               <p style="font-size: 14px; color: #4b5563;">${node.hash}</p>
-              ${
-                  node.warning
-                      ? `<p style="font-size: 14px; color: #d69e2e;">${node.warning}</p>`
-                      : ""
-              }
+              ${node.warning
+                ? `<p style="font-size: 14px; color: #d69e2e;">${node.warning}</p>`
+                : ""
+            }
           </div>
       `;
     });
@@ -500,9 +497,8 @@ function createDynamicUIHtml(data) {
     Object.entries(data.models).forEach(([section, items]) => {
         html += `
     <div style="border-bottom: 1px solid #e2e8f0; padding-top: 8px; padding-bottom: 8px;">
-        <h3 style="font-size: 18px; font-weight: semibold; margin-bottom: 8px;">${
-            section.charAt(0).toUpperCase() + section.slice(1)
-        }</h3>`;
+        <h3 style="font-size: 18px; font-weight: semibold; margin-bottom: 8px;">${section.charAt(0).toUpperCase() + section.slice(1)
+            }</h3>`;
         items.forEach((item) => {
             html += `<p style="font-size: 14px; color: ${textColor};">${item.name}</p>`;
         });
@@ -518,9 +514,8 @@ function createDynamicUIHtml(data) {
     Object.entries(data.files).forEach(([section, items]) => {
         html += `
     <div style="border-bottom: 1px solid #e2e8f0; padding-top: 8px; padding-bottom: 8px;">
-        <h3 style="font-size: 18px; font-weight: semibold; margin-bottom: 8px;">${
-            section.charAt(0).toUpperCase() + section.slice(1)
-        }</h3>`;
+        <h3 style="font-size: 18px; font-weight: semibold; margin-bottom: 8px;">${section.charAt(0).toUpperCase() + section.slice(1)
+            }</h3>`;
         items.forEach((item) => {
             html += `<p style="font-size: 14px; color: ${textColor};">${item.name}</p>`;
         });
@@ -738,8 +733,8 @@ async function deployWorkflow() {
       <iframe 
       style="z-index: 10; min-width: 600px; max-width: 1024px; min-height: 600px; border: none; background-color: transparent;"
       src="https://www.comfydeploy.com/dependency-graph?deps=${encodeURIComponent(
-          JSON.stringify(deps)
-      )}" />`
+                JSON.stringify(deps)
+            )}" />`
             // createDynamicUIHtml(deps),
         );
         if (!depsOk) return;
@@ -821,6 +816,7 @@ async function deployWorkflow() {
 }
 
 function addButton() {
+    return
     const menu = document.querySelector(".comfy-menu");
 
     const deploy = document.createElement("button");
@@ -951,14 +947,12 @@ export class LoadingDialog extends ComfyDialog {
     showLoading(title, message) {
         this.show(`
       <div style="width: 400px; display: flex; gap: 18px; flex-direction: column; overflow: unset">
-        <h3 style="margin: 0px; display: flex; align-items: center; justify-content: center; gap: 12px;">${title} ${
-            this.loadingIcon
-        }</h3>
-          ${
-              message
-                  ? `<label style="max-width: 100%; white-space: pre-wrap; word-wrap: break-word;">${message}</label>`
-                  : ""
-          }
+        <h3 style="margin: 0px; display: flex; align-items: center; justify-content: center; gap: 12px;">${title} ${this.loadingIcon
+            }</h3>
+          ${message
+                ? `<label style="max-width: 100%; white-space: pre-wrap; word-wrap: break-word;">${message}</label>`
+                : ""
+            }
         </div>
       `);
     }
@@ -1226,33 +1220,27 @@ export class ConfigDialog extends ComfyDialog {
     <h3 style="margin: 0px;">Comfy Deploy Config</h3>
     <label style="color: white; width: 100%;">
       <select id="deployOption" style="margin: 8px 0px; width: 100%; height:30px; box-sizing: border-box;" >
-        <option value="cloud" ${
-            data.environment === "cloud" ? "selected" : ""
-        }>Cloud</option>
-        <option value="local" ${
-            data.environment === "local" ? "selected" : ""
-        }>Local</option>
+        <option value="cloud" ${data.environment === "cloud" ? "selected" : ""
+            }>Cloud</option>
+        <option value="local" ${data.environment === "local" ? "selected" : ""
+            }>Local</option>
       </select>
     </label>
       <label style="color: white; width: 100%;">
         Endpoint:
-        <input id="endpoint" style="margin-top: 8px; width: 100%; height:40px; box-sizing: border-box; padding: 0px 6px;" type="text" value="${
-            data.endpoint
-        }">
+        <input id="endpoint" style="margin-top: 8px; width: 100%; height:40px; box-sizing: border-box; padding: 0px 6px;" type="text" value="${data.endpoint
+            }">
       </label>
       <div style="color: white;">
-        API Key: User / Org <button style="font-size: 18px;">${
-            data.displayName ?? ""
-        }</button>
-        <input id="apiKey" style="margin-top: 8px; width: 100%; height:40px; box-sizing: border-box; padding: 0px 6px;" type="password" value="${
-            data.apiKey
-        }">
+        API Key: User / Org <button style="font-size: 18px;">${data.displayName ?? ""
+            }</button>
+        <input id="apiKey" style="margin-top: 8px; width: 100%; height:40px; box-sizing: border-box; padding: 0px 6px;" type="password" value="${data.apiKey
+            }">
         <button id="loginButton" style="margin-top: 8px; width: 100%; height:40px; box-sizing: border-box; padding: 0px 6px;">
-          ${
-              data.apiKey
-                  ? "Re-login with ComfyDeploy"
-                  : "Login with ComfyDeploy"
-          }
+          ${data.apiKey
+                ? "Re-login with ComfyDeploy"
+                : "Login with ComfyDeploy"
+            }
         </button>
       </div>
       </div>

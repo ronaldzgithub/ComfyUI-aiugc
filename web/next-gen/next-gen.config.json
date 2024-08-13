@@ -1,9 +1,9 @@
 {
-    "name": "Comfy Deploy",
-    "og:title": "Comfy Deploy | Stable Diffusion from your terminal to the world",
+    "name": "Comfy AIUGC",
+    "og:title": "Comfy AIUGC | turn Comfyui workflow into an APP",
     "og:description": "",
-    "author": "BennyKok",
-    "tagline": "Stable Diffusion from your terminal to the world",
+    "author": "aiugc.org",
+    "tagline": "turn Comfyui workflow into an APP ",
     "description": "From your comfyui workflow to production ready API, flexibility at the speed of thought",
     "pricingPlan": [
         {
