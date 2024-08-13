@@ -1,15 +1,15 @@
 [project]
-name = "comfyui-deploy"
-description = "Open source comfyui deployment platform, a vercel for generative workflow infra."
+name = "comfyui-aiugc"
+description = "shangxiaobao.com deployment platform, turn your comfyUI workflow into an APP on shangxiaobao.com."
 version = "1.0.0"
 license = "LICENSE"
-dependencies = ["aiofiles", "pydantic", "opencv-python", "imageio-ffmpeg"]
+dependencies = ["aiofiles", "pydantic", "opencv-python"]
 
 [project.urls]
-Repository = "https://github.com/BennyKok/comfyui-deploy"
+Repository = "https://github.com/ronaldzgithub/ComfyUI-aiugc"
 #  Used by Comfy Registry https://comfyregistry.org
 
 [tool.comfy]
-PublisherId = "comfydeploy"
-DisplayName = "comfyui-deploy"
+PublisherId = "comfyaiugc"
+DisplayName = "comfyui-aiugc"
 Icon = ""
