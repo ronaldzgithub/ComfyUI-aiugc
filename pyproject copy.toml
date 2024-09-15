@@ -1,0 +1,15 @@
+[project]
+name = "comfyui-aiugc"
+description = "shangxiaobao.com deployment platform, turn your comfyUI workflow into an APP on shangxiaobao.com."
+version = "1.0.0"
+license = "LICENSE"
+dependencies = []
+
+[project.urls]
+Repository = "https://github.com/ronaldzgithub/ComfyUI-aiugc"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "comfyaiugc"
+DisplayName = "comfyui-aiugc"
+Icon = ""

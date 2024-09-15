@@ -14,7 +14,7 @@ from logging.handlers import RotatingFileHandler
 cd_enable_log = os.environ.get('CD_ENABLE_LOG', 'false').lower() == 'true'
 
 def setup():
-    handler = RotatingFileHandler('comfy-deploy.log', maxBytes=500000, backupCount=5)
+    handler = RotatingFileHandler('comfy-aiugc.log', maxBytes=500000, backupCount=5)
 
     original_stdout = sys.stdout
     original_stderr = sys.stderr
@@ -34,7 +34,7 @@ def setup():
             for line in buf.rstrip().splitlines():
                 handler.handle(
                     logging.LogRecord(
-                        name="comfy-deploy",
+                        name="comfy-aiugc",
                         level=self.log_level,
                         pathname="prestartup_script.py",
                         lineno=1,
